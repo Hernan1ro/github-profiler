@@ -2,8 +2,19 @@ import React, { useState } from "react";
 import { Stack, TextField, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-export const Searcher = ({ inputUser, setInputUser }) => {
-  const handleSubmit = () => {};
+export const Searcher = ({ setInputUser }) => {
+  const [valueInput, setValueInput] = useState("");
+
+  //-------------- change dinamicly inputSearch -----------//
+  const onSearchValueChange = (event) => {
+    const inputValue = event.target.value;
+    setValueInput(inputValue);
+  };
+
+  // ------------ search user -----------//
+  const handleSubmit = () => {
+    setInputUser(valueInput);
+  };
 
   return (
     <Stack
@@ -19,6 +30,8 @@ export const Searcher = ({ inputUser, setInputUser }) => {
         placeholder="Octocat"
         variant="outlined"
         size="small"
+        value={valueInput}
+        onChange={onSearchValueChange}
         sx={{
           width: "90%",
         }}
