@@ -1,6 +1,7 @@
 import React from "react";
 import { CardMedia, Grid } from "@mui/material";
 import { PrincipalInformation } from "../../components/PrincipalInformation";
+import { Description } from "../Description/index";
 
 export const UserCard = ({ userState }) => {
   const { avatar_url } = userState;
@@ -12,7 +13,7 @@ export const UserCard = ({ userState }) => {
       <Grid item xs={9}>
         <PrincipalInformation userState={userState} />
       </Grid>
-      {/* <Description/> */}
+      <Description userState={userState} />
     </Grid>
   );
 };
