@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
+import PaperInformation from "../../components/PaperInformation/index";
 
 export const Description = ({ userState }) => {
   const { bio } = userState;
@@ -12,7 +13,7 @@ export const Description = ({ userState }) => {
             : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vitae ad officiis reiciendis eaque, explicabo delectus aspernatur ipsum veniam aut?"}
         </Typography>
       </Stack>
-      {/* <PaperInformation/> */}
+      <PaperInformation userState={userState} />
       {/* <LocationInformation/> */}
     </>
   );
