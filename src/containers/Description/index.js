@@ -7,8 +7,12 @@ export const Description = ({ userState }) => {
   const { bio } = userState;
   return (
     <>
-      <Stack>
-        <Typography>
+      <Stack
+        sx={{
+          justifyContent: "center",
+        }}
+      >
+        <Typography variant="body1">
           {bio !== null
             ? bio
             : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vitae ad officiis reiciendis eaque, explicabo delectus aspernatur ipsum veniam aut?"}

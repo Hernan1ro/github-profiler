@@ -45,7 +45,6 @@ const App = () => {
     >
       <Searcher inputUser={inputUser} setInputUser={setInputUser} />
       <UserCard userState={userState} />
-      <div>Soy un astronata</div>
     </Container>
   );
 };

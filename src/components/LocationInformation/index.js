@@ -9,29 +9,39 @@ import React from "react";
 const LocationInformation = ({ userState }) => {
   const { location, twitter_username, blog, company } = userState;
   return (
-    <Grid container>
+    <Grid
+      container
+      spacing={2}
+      sx={{
+        marginTop: "10px",
+      }}
+    >
       <Grid item xs={6}>
-        <Stack>
+        <Stack direction="row" spacing={2}>
           <LocationOnIcon />
           <Typography>{location}</Typography>
         </Stack>
       </Grid>
       <Grid item xs={6}>
-        <Stack>
+        <Stack direction="row" spacing={2}>
           <TwitterIcon />
-          {twitter_username !== null ? twitter_username : "Not available"}
+          <Typography>
+            {twitter_username !== null ? twitter_username : "Not available"}
+          </Typography>
         </Stack>
       </Grid>
       <Grid item xs={6}>
-        <Stack>
+        <Stack direction="row" spacing={2}>
           <LanguageIcon />
-          {blog !== null ? blog : "Not available"}
+          <Typography>{blog !== null ? blog : "Not available"}</Typography>
         </Stack>
       </Grid>
       <Grid item xs={6}>
-        <Stack>
+        <Stack direction="row" spacing={2}>
           <BusinessIcon />
-          {company !== null ? company : "Not available"}
+          <Typography>
+            {company !== null ? company : "Not available"}
+          </Typography>
         </Stack>
       </Grid>
     </Grid>
